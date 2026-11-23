@@ -5,7 +5,6 @@
 }
 
 /* Variáveis da identidade visual  */
-
 :root {
   /* Cores da marca */
   --cs-petroleo: #0f5e66; /* primária: header, títulos, links */
@@ -38,8 +37,7 @@
   --cs-altura-header: 80px;
 }
 
-/* Sobrescrita do Bootstrap */
-
+/* Sobrescrita do Bootstrap e tema claro */
 :root,
 [data-bs-theme="light"] {
   --bs-body-font-family: var(--cs-fonte-texto);
@@ -70,7 +68,6 @@
 }
 
 /* Tema escuro */
-
 [data-bs-theme="dark"] {
   --cs-petroleo: #5cc8c2;
   --cs-petroleo-escuro: #8adbd6;
@@ -98,4 +95,169 @@
   --bs-link-hover-color: var(--cs-petroleo-escuro);
   --bs-link-hover-color-rgb: 138, 219, 214;
   --bs-focus-ring-color: rgba(92, 200, 194, 0.4);
+}
+
+/* Botões */
+.btn {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: var(--bs-border-radius-pill);
+  min-height: 48px;
+}
+
+/* Ação principal (coral) */
+.btn-acao {
+  --bs-btn-color: var(--cs-texto-acao);
+  --bs-btn-bg: var(--cs-coral);
+  --bs-btn-border-color: var(--cs-coral);
+  --bs-btn-hover-color: var(--cs-texto-acao);
+  --bs-btn-hover-bg: var(--cs-coral-escuro);
+  --bs-btn-hover-border-color: var(--cs-coral-escuro);
+  --bs-btn-active-color: var(--cs-texto-acao);
+  --bs-btn-active-bg: var(--cs-coral-escuro);
+  --bs-btn-active-border-color: var(--cs-coral-escuro);
+  --bs-btn-focus-shadow-rgb: 201, 74, 36;
+}
+
+/* Alteração das cores padrão dos botões */
+.btn-primary {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--cs-petroleo);
+  --bs-btn-border-color: var(--cs-petroleo);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--cs-petroleo-escuro);
+  --bs-btn-hover-border-color: var(--cs-petroleo-escuro);
+  --bs-btn-active-bg: var(--cs-petroleo-escuro);
+  --bs-btn-active-border-color: var(--cs-petroleo-escuro);
+  --bs-btn-focus-shadow-rgb: 15, 94, 102;
+}
+
+/* Ação secundária (contorno petróleo) */
+.btn-outline-primary {
+  --bs-btn-color: var(--cs-petroleo);
+  --bs-btn-border-color: var(--cs-petroleo);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--cs-petroleo);
+  --bs-btn-hover-border-color: var(--cs-petroleo);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--cs-petroleo-escuro);
+  --bs-btn-active-border-color: var(--cs-petroleo-escuro);
+  --bs-btn-focus-shadow-rgb: 15, 94, 102;
+  border-width: 2px;
+}
+
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-outline-primary {
+  --bs-btn-hover-color: var(--cs-areia);
+  --bs-btn-active-color: var(--cs-areia);
+}
+
+[data-bs-theme="dark"] .btn-primary {
+  --bs-btn-color: var(--cs-areia);
+}
+
+/* Header */
+.site-header {
+  background-color: var(--cs-branco);
+  border-bottom: 1px solid var(--cs-borda);
+}
+
+.site-header .navbar {
+  min-height: var(--cs-altura-header);
+  --bs-navbar-padding-y: 0.75rem;
+}
+
+.navbar-brand img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+/* Troca da logo conforme o tema */
+.logo-tema-escuro {
+  display: none !important;
+}
+
+[data-bs-theme="dark"] .logo-tema-claro {
+  display: none !important;
+}
+
+[data-bs-theme="dark"] .logo-tema-escuro {
+  display: block !important;
+}
+
+/* Links do menu */
+.site-header .nav-link {
+  color: var(--cs-tinta);
+  font-weight: 500;
+  padding-inline: 0.75rem;
+  border-bottom: 3px solid transparent;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.site-header .nav-link:hover {
+  color: var(--cs-petroleo);
+}
+
+/* .active é colocado pelo Scrollspy do Bootstrap */
+.site-header .nav-link.active {
+  color: var(--cs-petroleo);
+  border-bottom-color: var(--cs-sol);
+}
+
+/* Botões à direita: tema, "Quero ajudar" e menu hambúrguer */
+.botoes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-tema {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cs-borda);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--cs-tinta);
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-tema:hover {
+  background-color: var(--cs-petroleo-50);
+}
+
+.navbar-toggler {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--cs-borda);
+  border-radius: var(--bs-border-radius);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--bs-focus-ring-color);
+}
+
+/* Menu aberto no celular e tablet */
+@media (max-width: 991.98px) {
+  .site-header .navbar-collapse {
+    padding-block: 1rem;
+  }
+
+  .site-header .nav-link {
+    padding-block: 0.75rem;
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+  }
+
+  .site-header .nav-link.active {
+    border-left-color: var(--cs-sol);
+  }
 }
