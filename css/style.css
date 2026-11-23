@@ -3,3 +3,99 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Variáveis da identidade visual  */
+
+:root {
+  /* Cores da marca */
+  --cs-petroleo: #0f5e66; /* primária: header, títulos, links */
+  --cs-petroleo-escuro: #0a464c; /* hover do petróleo */
+  --cs-petroleo-50: #e3f2f1; /* fundos de seção, etiquetas */
+  --cs-coral: #c94a24; /* botão de ação principal */
+  --cs-coral-escuro: #a93c1c; /* hover do coral */
+  --cs-coral-400: #e8613c; /* só decorativo (formas, ícones grandes) */
+  --cs-sol: #f5b83d; /* destaques, sempre com texto escuro */
+  --cs-areia: #fff8f0; /* fundo da página */
+  --cs-branco: #ffffff; /* cards */
+  --cs-tinta: #1f2a2e; /* texto principal */
+  --cs-cinza: #5b6b70; /* texto secundário */
+  --cs-borda: #e9dfd3;
+
+  /* Texto sobre o botão de ação (muda no tema escuro) */
+  --cs-texto-acao: #ffffff;
+
+  /* Tipografia */
+  --cs-fonte-titulo: "Nunito", system-ui, sans-serif;
+  --cs-fonte-texto: "Inter", system-ui, sans-serif;
+
+  /* Espaçamento entre seções */
+  --cs-secao-espaco: 96px;
+
+  /* Sombra padrão dos cards */
+  --cs-sombra: 0 2px 12px rgba(31, 42, 46, 0.06);
+
+  /* Altura da navbar fixa (usada no scroll das âncoras) */
+  --cs-altura-header: 80px;
+}
+
+/* Sobrescrita do Bootstrap */
+
+:root,
+[data-bs-theme="light"] {
+  --bs-body-font-family: var(--cs-fonte-texto);
+  --bs-body-color: var(--cs-tinta);
+  --bs-body-bg: var(--cs-areia);
+  --bs-secondary-color: var(--cs-cinza);
+  --bs-border-color: var(--cs-borda);
+
+  /* .text-primary, .bg-primary, .border-primary */
+  --bs-primary: var(--cs-petroleo);
+  --bs-primary-rgb: 15, 94, 102;
+  --bs-primary-bg-subtle: var(--cs-petroleo-50);
+  --bs-primary-text-emphasis: var(--cs-petroleo-escuro);
+
+  /* Links */
+  --bs-link-color: var(--cs-petroleo);
+  --bs-link-color-rgb: 15, 94, 102;
+  --bs-link-hover-color: var(--cs-petroleo-escuro);
+  --bs-link-hover-color-rgb: 10, 70, 76;
+
+  /* Cantos arredondados */
+  --bs-border-radius: 0.75rem; /* 12px: campos */
+  --bs-border-radius-lg: 1.25rem; /* 20px: cards */
+  --bs-border-radius-pill: 999px;
+
+  /* Contorno de foco (acessibilidade) */
+  --bs-focus-ring-color: rgba(15, 94, 102, 0.35);
+}
+
+/* Tema escuro */
+
+[data-bs-theme="dark"] {
+  --cs-petroleo: #5cc8c2;
+  --cs-petroleo-escuro: #8adbd6;
+  --cs-petroleo-50: #1f4a48;
+  --cs-coral: #ff8a65;
+  --cs-coral-escuro: #ffa486;
+  --cs-areia: #0e1f22;
+  --cs-branco: #16302f;
+  --cs-tinta: #eef5f4;
+  --cs-cinza: #b9cbc9;
+  --cs-borda: #2a4644;
+  --cs-texto-acao: #1f2a2e;
+  --cs-sombra: 0 2px 12px rgba(0, 0, 0, 0.35);
+
+  --bs-body-color: var(--cs-tinta);
+  --bs-body-bg: var(--cs-areia);
+  --bs-secondary-color: var(--cs-cinza);
+  --bs-border-color: var(--cs-borda);
+  --bs-primary: var(--cs-petroleo);
+  --bs-primary-rgb: 92, 200, 194;
+  --bs-primary-bg-subtle: var(--cs-petroleo-50);
+  --bs-primary-text-emphasis: var(--cs-petroleo-escuro);
+  --bs-link-color: var(--cs-petroleo);
+  --bs-link-color-rgb: 92, 200, 194;
+  --bs-link-hover-color: var(--cs-petroleo-escuro);
+  --bs-link-hover-color-rgb: 138, 219, 214;
+  --bs-focus-ring-color: rgba(92, 200, 194, 0.4);
+}
