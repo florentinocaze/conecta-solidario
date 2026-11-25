@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/projetos.css" />
     <link rel="icon" href="./assets/icons/favicon.svg" />
   </head>
   <body body data-bs-spy="scroll" data-bs-target="#menu-principal" data-bs-root-margin="0px 0px -40%">
@@ -66,18 +67,157 @@
       </section>
 
       <!-- PROJETOS (Membro 2) -->
-      <section id="projetos">
-        <div class="container">
-          <h2>Projetos sociais</h2>
-        </div>
-      </section>
+<section id="projetos" class="secao">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Projetos sociais</h2>
+      <p>Conheça iniciativas que transformam vidas em nossa comunidade.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+      <button class="btn btn-outline-primary filtro-projeto active"
+        data-filtro="todos">Todos</button>
+
+      <button class="btn btn-outline-primary filtro-projeto"
+        data-filtro="meio-ambiente">Meio ambiente</button>
+
+      <button class="btn btn-outline-primary filtro-projeto"
+        data-filtro="idosos">Idosos</button>
+
+      <button class="btn btn-outline-primary filtro-projeto"
+        data-filtro="saude">Saúde</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3 card-projeto-item"
+        data-categoria="meio-ambiente">
+        <article class="card-projeto">
+          <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600"
+            alt="Tartaruga marinha no oceano">
+          <div class="p-3">
+            <span class="badge text-bg-success">Meio ambiente</span>
+            <h3 class="h5 mt-3">Associação Guajiru</h3>
+            <p>Apoio à conservação das tartarugas marinhas e educação ambiental.</p>
+            <a href="https://associacaoguajiru.com.br/"
+              target="_blank" rel="noopener">Conheça o projeto</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-3 card-projeto-item"
+        data-categoria="idosos">
+        <article class="card-projeto">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600"
+            alt="Pessoas reunidas em atividade comunitária">
+          <div class="p-3">
+            <span class="badge text-bg-primary">Idosos</span>
+            <h3 class="h5 mt-3">Vila Vicentina</h3>
+            <p>Instituição de acolhimento e cuidado de pessoas idosas.</p>
+            <a href="https://www.vilavicentinansa.org/doe"
+              target="_blank" rel="noopener">Conheça o projeto</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-3 card-projeto-item"
+        data-categoria="saude">
+        <article class="card-projeto">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600"
+            alt="Profissional da área da saúde">
+          <div class="p-3">
+            <span class="badge text-bg-danger">Saúde</span>
+            <h3 class="h5 mt-3">Casa da Criança Dr. Gilson Guedes</h3>
+            <p>Apoio a crianças e famílias em tratamento contra o câncer.</p>
+            <a href="https://www.casadacriancacomcancerpb.com.br/"
+              target="_blank" rel="noopener">Conheça o projeto</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-3 card-projeto-item"
+        data-categoria="saude">
+        <article class="card-projeto">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600"
+            alt="Atendimento em ambiente hospitalar">
+          <div class="p-3">
+            <span class="badge text-bg-danger">Saúde</span>
+            <h3 class="h5 mt-3">Hospital Padre Zé</h3>
+            <p>Instituição hospitalar que realiza atendimento à população.</p>
+            <a href="https://hospitalpadreze.org/doacoes/"
+              target="_blank" rel="noopener">Conheça o projeto</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <!-- CAMPANHAS (Membro 2) -->
-      <section id="campanhas">
-        <div class="container">
-          <h2>Campanhas de arrecadação</h2>
-        </div>
-      </section>
+<section id="campanhas">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Campanhas de arrecadação</h2>
+      <p>Pequenas atitudes podem transformar muitas vidas.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <article class="card-campanha">
+          <img
+            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600"
+            alt="Pessoas participando de uma ação solidária">
+
+          <div class="p-3">
+            <span class="badge text-bg-success">Solidariedade</span>
+            <h3 class="h5 mt-3">Campanha do alimento</h3>
+            <p>Arrecadação de alimentos não perecíveis para famílias em situação de vulnerabilidade.</p>
+            <p><strong>Como ajudar:</strong> doe alimentos ou divulgue a campanha.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article class="card-campanha">
+          <img
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600"
+            alt="Ação de apoio a crianças">
+
+          <div class="p-3">
+            <span class="badge text-bg-primary">Infância</span>
+            <h3 class="h5 mt-3">Doe brinquedos</h3>
+            <p>Incentivo à doação de brinquedos em bom estado para crianças.</p>
+            <p><strong>Como ajudar:</strong> doe brinquedos ou materiais educativos.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article class="card-campanha">
+          <img
+            src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600"
+            alt="Voluntários organizando doações">
+
+          <div class="p-3">
+            <span class="badge text-bg-warning">Voluntariado</span>
+            <h3 class="h5 mt-3">Corrente do bem</h3>
+            <p>Mobilização de voluntários para apoiar ações sociais na comunidade.</p>
+            <p><strong>Como ajudar:</strong> participe como voluntário ou compartilhe a iniciativa.</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <p class="text-center mt-4">
+      <small>Campanhas ilustrativas desenvolvidas para fins acadêmicos. Não representam arrecadações reais.</small>
+    </p>
+  </div>
+</section>
 
       <!-- GALERIA (Membro 2) -->
       <section id="galeria">
