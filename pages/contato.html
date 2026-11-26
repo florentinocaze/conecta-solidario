@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Contato | Conecta Solidário</title>
-    <meta name="description" content="Entre em contato com a equipe do Conecta Solidário." />
+    <meta name="description" content="Entre em contato com a equipe do Conecta Solidário e cadastre-se como voluntário." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,11 +51,164 @@
       </nav>
     </header>
 
+    <main id="conteudo">
+      <!-- Banner -->
+      <section class="contato-banner" aria-labelledby="contato-titulo">
+        <div class="container">
+          <nav aria-label="Você está em">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Início</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contato</li>
+            </ol>
+          </nav>
+          <h1 id="contato-titulo">Quero ser voluntário</h1>
+          <p class="lead">Preencha o formulário e a organização escolhida entrará em contato com as orientações para você começar.</p>
+        </div>
+      </section>
+
+      <!-- Formulário + mapa -->
+      <section id="formulario" class="contato-secao" aria-labelledby="form-titulo">
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+            <!-- Formulário -->
+            <div class="col-lg-7">
+              <div class="contato-card">
+                <h2 id="form-titulo" class="h3">Formulário de voluntariado</h2>
+                <p class="contato-legenda">Campos com <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> são obrigatórios.</p>
+
+                <div id="form-sucesso" class="alert alert-success d-none" role="status" tabindex="-1">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <strong>Inscrição enviada!</strong> Obrigado, <span id="nome-sucesso"></span>. Em breve a organização entrará em contato.
+                  <small class="d-block mt-1">Este formulário é ilustrativo (projeto acadêmico): nenhum dado é enviado ou armazenado.</small>
+                </div>
+
+                <form id="form-voluntario" class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="nome" class="form-label">Nome completo *</label>
+                      <input type="text" class="form-control" id="nome" name="nome" autocomplete="name" minlength="3" required />
+                      <div class="invalid-feedback">Informe seu nome completo (mínimo de 3 letras).</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">E-mail *</label>
+                      <input type="email" class="form-control" id="email" name="email" autocomplete="email" placeholder="nome@exemplo.com" required />
+                      <div class="invalid-feedback">Informe um e-mail válido, como nome@exemplo.com.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
+                      <input type="tel" class="form-control" id="telefone" name="telefone" autocomplete="tel" inputmode="numeric" placeholder="(83) 9 9999-9999" pattern="\(\d{2}\) \d{4,5}-?\d{4}|\(\d{2}\) \d \d{4}-\d{4}" maxlength="16" required />
+                      <div class="invalid-feedback">Informe DDD e número, como (83) 9 9999-9999.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="projeto" class="form-label">Projeto de interesse *</label>
+                      <select class="form-select" id="projeto" name="projeto" required>
+                        <option value="" selected disabled>Selecione um projeto</option>
+                        <option value="Associação Guajiru">Associação Guajiru (meio ambiente)</option>
+                        <option value="Vila Vicentina">Vila Vicentina (idosos)</option>
+                        <option value="Casa da Criança Dr. Gilson Guedes">Casa da Criança Dr. Gilson Guedes (saúde)</option>
+                        <option value="Hospital Padre Zé">Hospital Padre Zé (saúde)</option>
+                        <option value="Ainda não sei">Ainda não sei</option>
+                      </select>
+                      <div class="invalid-feedback">Escolha um projeto.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="disponibilidade" class="form-label">Disponibilidade *</label>
+                      <select class="form-select" id="disponibilidade" name="disponibilidade" required>
+                        <option value="" selected disabled>Selecione</option>
+                        <option>Dias úteis, manhã</option>
+                        <option>Dias úteis, tarde</option>
+                        <option>Dias úteis, noite</option>
+                        <option>Fins de semana</option>
+                      </select>
+                      <div class="invalid-feedback">Escolha sua disponibilidade.</div>
+                    </div>
+
+                    <fieldset class="col-12">
+                      <legend class="form-label">Como você quer ajudar? *</legend>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="forma" id="forma-voluntario" value="Voluntariado" required />
+                        <label class="form-check-label" for="forma-voluntario">Voluntariado</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="forma" id="forma-doacao" value="Doação" />
+                        <label class="form-check-label" for="forma-doacao">Doação</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="forma" id="forma-divulgacao" value="Divulgação" />
+                        <label class="form-check-label" for="forma-divulgacao">Divulgação</label>
+                      </div>
+                      <div class="invalid-feedback">Escolha uma forma de ajudar.</div>
+                    </fieldset>
+
+                    <div class="col-12">
+                      <label for="mensagem" class="form-label">Mensagem <span class="text-secondary fw-normal">(opcional)</span></label>
+                      <textarea class="form-control" id="mensagem" name="mensagem" rows="4" maxlength="500" placeholder="Conte um pouco sobre você e sua experiência."></textarea>
+                      <div class="form-text"><span id="contador">0</span>/500 caracteres</div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="aceite" name="aceite" required />
+                        <label class="form-check-label" for="aceite">Concordo em ser contatado pela organização escolhida. *</label>
+                        <div class="invalid-feedback">É preciso concordar para enviar a inscrição.</div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-wrap gap-2">
+                      <button type="submit" class="btn btn-acao">Enviar inscrição</button>
+                      <button type="reset" class="btn btn-outline-primary" id="limpar-form">Limpar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="col-lg-5">
+              <div class="contato-card h-100">
+                <h2 class="h3" id="mapa-titulo">Onde estamos</h2>
+                <p class="contato-legenda">Veja no mapa onde ficam os projetos parceiros.</p>
+
+                <div class="mapa-filtros" role="group" aria-label="Escolher local no mapa">
+                  <button type="button" class="btn btn-sm btn-primary btn-mapa active" aria-pressed="true" data-local="João Pessoa, PB">Todos</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary btn-mapa" aria-pressed="false" data-local="Associação Guajiru, Paraíba">Guajiru</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary btn-mapa" aria-pressed="false" data-local="Vila Vicentina, João Pessoa, PB">Vila Vicentina</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary btn-mapa" aria-pressed="false" data-local="Casa da Criança com Câncer Dr. Gilson Guedes, João Pessoa, PB">Casa da Criança</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary btn-mapa" aria-pressed="false" data-local="Hospital Padre Zé, João Pessoa, PB">Padre Zé</button>
+                </div>
+
+                <div class="mapa-moldura">
+                  <iframe
+                    id="mapa"
+                    title="Mapa de João Pessoa com os projetos parceiros"
+                    src="https://www.google.com/maps?q=Jo%C3%A3o+Pessoa,+PB&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <ul class="contato-lista">
+                  <li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:conectasolidario@ajude.com">conectasolidario@ajude.com</a></li>
+                  <li><i class="bi bi-telephone" aria-hidden="true"></i> <a href="tel:+5583998022042">(83) 9 9802-2042</a></li>
+                  <li><i class="bi bi-geo-alt" aria-hidden="true"></i> João Pessoa, PB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="d-flex flex-column flex-lg-row gap-2">
           <div class="col-12 col-md-6 col-lg-4">
-            <a href="/index.html" class="d-inline-block mb-3">
+            <a href="../index.html" class="d-inline-block mb-3">
               <img src="../assets/logo/logo-escuro.svg" alt="Conecta Solidário: voltar ao início" width="157" height="48" />
             </a>
             <p class="rodape-missao">Conectamos quem quer ajudar a projetos sociais, campanhas e oportunidades de voluntariado na Grande João Pessoa.</p>
@@ -117,5 +270,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/contato.js"></script>
   </body>
 </html>
