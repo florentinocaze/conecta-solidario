@@ -22,15 +22,15 @@
   --cs-borda: #e9dfd3;
 
   --cs-texto-acao: #ffffff;
-  --cs-rodape-fundo: #0B4A50;
-  --cs-rodape-texto: #D7ECEA;
+  --cs-rodape-fundo: #0b4a50;
+  --cs-rodape-texto: #d7ecea;
 
   /* Sombra padrão dos cards */
   --cs-sombra: 0 2px 12px rgba(31, 42, 46, 0.06);
 
   --cs-fonte-titulo: "Nunito", system-ui, sans-serif;
   --cs-fonte-texto: "Inter", system-ui, sans-serif;
-  
+
   --cs-secao-espaco: 96px;
   --cs-altura-header: 80px;
 }
@@ -80,7 +80,7 @@
   --cs-texto-acao: #1f2a2e;
   --cs-sombra: 0 2px 12px rgba(0, 0, 0, 0.35);
   --cs-rodape-fundo: #081517;
-  --cs-rodape-texto: #B9CBC9;
+  --cs-rodape-texto: #b9cbc9;
 
   --bs-body-color: var(--cs-tinta);
   --bs-body-bg: var(--cs-areia);
@@ -271,7 +271,7 @@
 
 @media (min-width: 992px) {
   .hero {
-    padding-block: 52px 104px;
+    padding-block: 52px 92px;
   }
 }
 
@@ -309,7 +309,8 @@
   right: 0;
   bottom: -0.18em;
   height: 0.28em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 16' preserveAspectRatio='none'%3E%3Cpath d='M4 11c60-8 150-10 292-4' stroke='%23F5B83D' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 16' preserveAspectRatio='none'%3E%3Cpath d='M4 11c60-8 150-10 292-4' stroke='%23F5B83D' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+    no-repeat center / 100% 100%;
 }
 
 .hero-botoes {
@@ -371,14 +372,106 @@
   }
 }
 
-/* PROJETOS */
-
 /* Espaçamento das seções */
+#como-funciona,
 #projetos,
 #campanhas,
 #galeria {
-  padding: var(--cs-secao-espaco) 0;
+  padding: var(--cs-secao-espaco) 0 0;
 }
+
+/* COMO FUNCIONA */
+
+#como-funciona {
+  padding-top: 0;
+}
+
+.etapas-intro {
+  max-width: 36rem;
+}
+
+.etapas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* celular: vertical */
+  gap: 2rem;
+  position: relative;
+}
+
+/* Linha vertical que liga as etapas no celular */
+.etapas::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 23px;
+  width: 3px;
+  background-color: var(--cs-borda);
+}
+
+.etapa {
+  position: relative;
+  padding-left: 72px;
+}
+
+.etapa-numero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: var(--cs-petroleo);
+  color: var(--cs-areia);
+  font-family: var(--cs-fonte-titulo);
+  font-weight: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 0 0 6px var(--cs-areia); /* "recorta" a linha atrás do número */
+}
+
+.etapa h3 {
+  margin: 0.6rem 0 0.4rem;
+}
+
+.etapa p {
+  margin: 0;
+  color: var(--cs-cinza);
+}
+
+/* Desktop: horizontal */
+@media (min-width: 992px) {
+  .etapas {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .etapas::before {
+    top: 23px;
+    bottom: auto;
+    left: 12.5%;
+    right: 12.5%;
+    width: auto;
+    height: 3px;
+  }
+
+  .etapa {
+    flex: 1;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .etapa-numero {
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* PROJETOS */
 
 /* Títulos */
 #projetos h2,
@@ -431,7 +524,7 @@
 
 .site-footer a:hover,
 .site-footer a:focus-visible {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -482,13 +575,15 @@
   border-radius: 999px;
   background-color: rgba(255, 255, 255, 0.1);
   font-size: 1.15rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .rodape-redes a:hover,
 .rodape-redes a:focus-visible {
   background-color: var(--cs-coral);
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   transform: translateY(-2px);
 }
@@ -528,7 +623,10 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
 }
 
 .voltar-topo.visivel {
