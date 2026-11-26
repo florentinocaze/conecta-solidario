@@ -47,6 +47,29 @@
 - Criação e alteração de dados fictícios.
 - Emprego de elementos visuais de uso livre e por meio da plataforma Unsplash, sob os termos da Licença Unsplash padrão.
 
+### Integrante 03
+
+**Integrante:** Eduardo Francisco
+**Ferramenta utilizada:** Claude (Anthropic)
+**Data:** 26/11/2026
+
+#### Atividades realizadas com auxílio de IA
+
+1. Planejamento da minha parte do projeto (formulário, mapa e perguntas frequentes).
+2. Geração do código do formulário de voluntariado da página de contato (HTML, CSS e JavaScript), incluindo validação com Bootstrap, máscara de telefone e contador de caracteres.
+3. Geração do mapa incorporado (iframe do Google Maps) com botões para alternar entre os projetos parceiros.
+4. Geração da seção de perguntas frequentes com o componente accordion do Bootstrap e dos estilos correspondentes, com suporte ao tema escuro.
+5. Revisão do código existente do grupo, com apontamento de pontos de melhoria (atributo `body` duplicado no `index.html`, link do logo com caminho absoluto no rodapé e trecho do `script.js` sem uso).
+6. Orientação sobre onde cada arquivo deve ser colocado na estrutura do projeto e sobre como integrar o código ao repositório.
+
+#### Alterações e validações realizadas
+
+- Integração do formulário, do mapa e dos estilos na página `pages/contato.html`, com os arquivos `css/contato.css` e `js/contato.js`.
+- Substituição da seção `#faq` do `index.html` e inclusão dos estilos do FAQ no `css/style.css`.
+- Correção do link do logo no rodapé da página de contato (`../index.html`).
+- Textos do formulário e do FAQ coerentes com o aviso de projeto acadêmico: o envio do formulário é apenas simulado e nenhum dado é armazenado.
+- Testes realizados no navegador: validação dos campos do formulário, funcionamento dos botões do mapa, funcionamento do accordion e alternância entre os temas claro e escuro. (Navegador: ____)
+
 ### Responsabilidade dos integrantes
 
 O código e os textos gerados com auxílio de IA foram revisados, adaptados e testados pelos integrantes, que permanecem responsáveis pelas alterações realizadas no projeto.
