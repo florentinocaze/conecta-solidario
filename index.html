@@ -15,7 +15,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/projetos.css" />
     <link rel="icon" href="./assets/icons/favicon.svg" />
   </head>
   <body body data-bs-spy="scroll" data-bs-target="#menu-principal" data-bs-root-margin="0px 0px -40%">
@@ -53,9 +52,24 @@
 
     <main>
       <!-- HERO (Membro 1) -->
-      <section id="inicio" class="secao">
+      <section id="inicio" class="hero" aria-labelledby="hero-titulo">
         <div class="container">
-          <h1>Ajudar começa perto de você.</h1>
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6 hero-texto">
+              <h1 id="hero-titulo">Ajudar começa <span class="destaque">perto de você.</span></h1>
+              <p class="lead">Encontre projetos sociais, campanhas de arrecadação e oportunidades de voluntariado na sua cidade, e escolha como quer participar.</p>
+              <div class="hero-botoes">
+                <a class="btn btn-acao btn-lg" href="pages/contato.html">Quero ser voluntário</a>
+                <a class="btn btn-outline-primary btn-lg" href="#projetos">Conhecer projetos</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-imagem">
+                <img src="images/hero.jpg" alt="Mãos pintadas com tinta vermelha formando o símbolo de um coração" width="1200" height="900" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -251,7 +265,9 @@
                 <a href="#" aria-label="WhatsApp do Conecta Solidário" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
               </li>
               <li>
-                <a href="https://github.com/florentinocaze/conecta-solidario" target="_blank" rel="noopener noreferrer" aria-label="Repositório do projeto no GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                <a href="https://github.com/florentinocaze/conecta-solidario" target="_blank" rel="noopener noreferrer" aria-label="Repositório do projeto no GitHub"
+                  ><i class="bi bi-github" aria-hidden="true"></i
+                ></a>
               </li>
             </ul>
           </div>

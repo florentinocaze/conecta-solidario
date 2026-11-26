@@ -262,6 +262,115 @@
   }
 }
 
+/* HERO */
+
+.hero {
+  padding-block: 56px 72px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    padding-block: 52px 104px;
+  }
+}
+
+/* Texto */
+.hero-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  animation: hero-entrada 0.7s ease-out both;
+}
+
+.hero-texto h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 1.4rem + 3.4vw, 3.75rem); /* 36px a 60px */
+  line-height: 1.05;
+}
+
+.hero-texto .lead {
+  margin: 0;
+  max-width: 34rem;
+}
+
+.destaque {
+  position: relative;
+  display: inline-block;
+  color: var(--cs-coral);
+  white-space: nowrap;
+}
+
+.destaque::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.18em;
+  height: 0.28em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 16' preserveAspectRatio='none'%3E%3Cpath d='M4 11c60-8 150-10 292-4' stroke='%23F5B83D' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+
+.hero-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero-botoes .btn {
+    width: 100%; /* no celular, botões ocupam a largura toda */
+  }
+}
+
+/* Imagem */
+.hero-imagem {
+  position: relative;
+  max-width: 560px;
+  margin-inline: auto;
+  padding-top: 72px; /* espaço para o sol aparecer atrás da foto */
+  animation: hero-entrada 0.7s ease-out 0.15s both;
+}
+
+.hero-imagem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 2 / 1;
+  transform: translateX(-50%);
+  border-radius: 999px 999px 0 0;
+  background-color: var(--cs-coral-400);
+  opacity: 0.9;
+}
+
+.hero-imagem img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 6px solid var(--cs-branco);
+  border-radius: 32px;
+  box-shadow: 0 18px 40px rgba(15, 94, 102, 0.18);
+}
+
+/* Animação de entrada */
+@keyframes hero-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* PROJETOS */
 
 /* Espaçamento das seções */
