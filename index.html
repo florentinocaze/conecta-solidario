@@ -234,9 +234,68 @@
       </section>
 
       <!-- PERGUNTAS FREQUENTES (Membro 3) -->
-      <section id="faq">
+      <section id="faq" aria-labelledby="faq-titulo">
         <div class="container">
-          <h2>Perguntas frequentes</h2>
+          <div class="text-center mb-5">
+            <h2 id="faq-titulo">Perguntas frequentes</h2>
+            <p>Tire suas dúvidas antes de começar a ajudar.</p>
+          </div>
+
+          <div class="accordion faq-acordeao mx-auto" id="acordeao-faq">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">Como me torno voluntário?</button>
+              </h3>
+              <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Escolha um projeto, preencha o <a href="pages/contato.html">formulário de voluntariado</a> e aguarde o contato da organização com as orientações.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">Preciso ter experiência?</button>
+              </h3>
+              <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Não. Muitas ações aceitam voluntários iniciantes, e cada organização explica o que é necessário para participar.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">Posso ajudar sem ser voluntário?</button>
+              </h3>
+              <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Sim. Você pode fazer doações pelos sites dos projetos, participar das campanhas ou divulgar as iniciativas para a sua rede de contatos.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">As campanhas de arrecadação são reais?</button>
+              </h3>
+              <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Não. As campanhas são ilustrativas e foram criadas para fins acadêmicos. Para doar de verdade, use os links oficiais de cada projeto social.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">O Conecta Solidário representa essas organizações?</button>
+              </h3>
+              <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Não. Este é um projeto acadêmico da disciplina de Desenvolvimento Front-End para Web (UNIPÊ) e não tem vínculo com as organizações citadas.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6">Meus dados ficam armazenados?</button>
+              </h3>
+              <div id="faq-6" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
+                <div class="accordion-body">Não. O formulário é apenas uma simulação: nenhum dado é enviado nem guardado.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
