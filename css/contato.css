@@ -1,0 +1,167 @@
+.contato-banner {
+  position: relative;
+  overflow: hidden;
+  padding-block: 56px 64px;
+  background-color: var(--cs-petroleo-50);
+}
+
+@media (min-width: 992px) {
+  .contato-banner {
+    padding-block: 80px 88px;
+  }
+}
+
+.contato-banner::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+  width: 320px;
+  aspect-ratio: 2 / 1;
+  border-radius: 999px 999px 0 0;
+  background-color: var(--cs-coral-400);
+  opacity: 0.18;
+}
+
+.contato-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contato-banner h1 {
+  margin-bottom: 0.75rem;
+}
+
+.contato-banner .lead {
+  max-width: 38rem;
+  margin: 0;
+}
+
+.contato-banner .breadcrumb {
+  --bs-breadcrumb-divider-color: var(--cs-cinza);
+  --bs-breadcrumb-item-active-color: var(--cs-cinza);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Seção */
+.contato-secao {
+  padding: 56px 0 var(--cs-secao-espaco);
+}
+
+/* Card */
+.contato-card {
+  background-color: var(--cs-branco);
+  border: 1px solid var(--cs-borda);
+  border-radius: 1.25rem;
+  box-shadow: var(--cs-sombra);
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contato-card {
+    padding: 2rem;
+  }
+}
+
+.contato-card h2 {
+  color: var(--cs-petroleo);
+  font-family: var(--cs-fonte-titulo);
+  font-weight: 900;
+}
+
+.contato-legenda {
+  color: var(--cs-cinza);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Campos */
+.contato-card .form-label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.contato-card .form-control,
+.contato-card .form-select {
+  min-height: 48px;
+  background-color: var(--cs-areia);
+  border-color: var(--cs-borda);
+  color: var(--cs-tinta);
+}
+
+.contato-card textarea.form-control {
+  min-height: 120px;
+}
+
+.contato-card .form-control:focus,
+.contato-card .form-select:focus,
+.contato-card .form-check-input:focus {
+  border-color: var(--cs-petroleo);
+  box-shadow: 0 0 0 3px var(--bs-focus-ring-color);
+}
+
+.contato-card .form-check-input:checked {
+  background-color: var(--cs-petroleo);
+  border-color: var(--cs-petroleo);
+}
+
+.contato-card fieldset legend {
+  float: none;
+  font-size: 1rem;
+  width: auto;
+}
+
+/* Mensagem de erro de grupo de rádio/checkbox */
+.contato-card fieldset.was-invalid-group .invalid-feedback {
+  display: block;
+}
+
+/* Sucesso */
+#form-sucesso {
+  border-radius: var(--bs-border-radius);
+}
+
+/* Mapa */
+.mapa-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mapa-filtros .btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.4rem;
+  min-height: 40px;
+  font-size: 0.9rem;
+}
+
+.mapa-moldura {
+  border: 1px solid var(--cs-borda);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: var(--cs-petroleo-50);
+}
+
+.mapa-moldura iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contato-lista {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contato-lista i {
+  color: var(--cs-petroleo);
+  margin-right: 0.35rem;
+}
