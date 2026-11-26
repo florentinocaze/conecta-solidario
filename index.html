@@ -73,33 +73,33 @@
       </section>
 
       <section id="como-funciona" class="secao" aria-labelledby="etapas-titulo">
-      <div class="container">
-        <h2 id="etapas-titulo" class="text-center">Do clique à ação</h2>
-        <p class="lead text-center mx-auto mb-5 etapas-intro">Em quatro passos, você sai da curiosidade para a ajuda de verdade.</p>
-        <ol class="etapas">
-          <li class="etapa">
-            <span class="etapa-numero">1</span>
-            <h3>Encontre um projeto</h3>
-            <p>Navegue pelos projetos e filtre pela causa que mais combina com você.</p>
-          </li>
-          <li class="etapa">
-            <span class="etapa-numero">2</span>
-            <h3>Escolha como ajudar</h3>
-            <p>Doação, voluntariado ou divulgação: cada projeto mostra do que precisa.</p>
-          </li>
-          <li class="etapa">
-            <span class="etapa-numero">3</span>
-            <h3>Faça sua inscrição</h3>
-            <p>Preencha o formulário de voluntariado ou participe de uma campanha.</p>
-          </li>
-          <li class="etapa">
-            <span class="etapa-numero">4</span>
-            <h3>A organização entra em contato</h3>
-            <p>Você recebe as orientações para começar a ajudar.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+        <div class="container">
+          <h2 id="etapas-titulo" class="text-center">Do clique à ação</h2>
+          <p class="lead text-center mx-auto mb-5 etapas-intro">Em quatro passos, você sai da curiosidade para a ajuda de verdade.</p>
+          <ol class="etapas">
+            <li class="etapa">
+              <span class="etapa-numero">1</span>
+              <h3>Encontre um projeto</h3>
+              <p>Navegue pelos projetos e filtre pela causa que mais combina com você.</p>
+            </li>
+            <li class="etapa">
+              <span class="etapa-numero">2</span>
+              <h3>Escolha como ajudar</h3>
+              <p>Doação, voluntariado ou divulgação: cada projeto mostra do que precisa.</p>
+            </li>
+            <li class="etapa">
+              <span class="etapa-numero">3</span>
+              <h3>Faça sua inscrição</h3>
+              <p>Preencha o formulário de voluntariado ou participe de uma campanha.</p>
+            </li>
+            <li class="etapa">
+              <span class="etapa-numero">4</span>
+              <h3>A organização entra em contato</h3>
+              <p>Você recebe as orientações para começar a ajudar.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
       <section id="projetos" class="secao">
         <div class="container">
@@ -223,14 +223,85 @@
         </div>
       </section>
 
-      <!-- GALERIA (Membro 2) -->
-      <section id="galeria">
+      <section id="galeria" class="secao" aria-labelledby="galeria-titulo">
         <div class="container">
-          <h2>Nossas ações</h2>
+          <div class="text-center mb-5">
+            <h2 id="galeria-titulo" class="mt-3">Nossas ações</h2>
+            <p class="lead mx-auto galeria-intro">Momentos de quem já transformou vontade de ajudar em ação.</p>
+          </div>
+
+          <div id="carrosselAcoes" class="carousel slide galeria-carrossel" aria-label="Fotos de ações solidárias">
+            <!-- Indicadores (bolinhas) -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carrosselAcoes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1 de 5"></button>
+              <button type="button" data-bs-target="#carrosselAcoes" data-bs-slide-to="1" aria-label="Foto 2 de 5"></button>
+              <button type="button" data-bs-target="#carrosselAcoes" data-bs-slide-to="2" aria-label="Foto 3 de 5"></button>
+              <button type="button" data-bs-target="#carrosselAcoes" data-bs-slide-to="3" aria-label="Foto 4 de 5"></button>
+              <button type="button" data-bs-target="#carrosselAcoes" data-bs-slide-to="4" aria-label="Foto 5 de 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <figure class="carousel-item active">
+                <img src="images/galeria/acao-1.jpg" alt="Voluntários separando alimentos em cestas básicas" width="1200" height="675" />
+                <figcaption class="galeria-legenda">
+                  <span class="etiqueta">Alimentação</span>
+                  <h3>Arrecadação de alimentos</h3>
+                  <p>Montagem de cestas básicas para famílias atendidas por projetos da cidade.</p>
+                </figcaption>
+              </figure>
+
+              <figure class="carousel-item">
+                <img src="images/galeria/acao-2.jpg" alt="Grupo recolhendo lixo na areia da praia" width="1200" height="675" loading="lazy" />
+                <figcaption class="galeria-legenda">
+                  <span class="etiqueta">Meio ambiente</span>
+                  <h3>Mutirão de limpeza de praia</h3>
+                  <p>Retirada de resíduos da orla para proteger a vida marinha do litoral.</p>
+                </figcaption>
+              </figure>
+
+              <figure class="carousel-item">
+                <img src="images/galeria/acao-3.jpg" alt="Voluntária conversando com uma senhora idosa" width="1200" height="675" loading="lazy" />
+                <figcaption class="galeria-legenda">
+                  <span class="etiqueta">Idosos</span>
+                  <h3>Tarde de convivência</h3>
+                  <p>Visitas, conversas e atividades em instituições de acolhimento de idosos.</p>
+                </figcaption>
+              </figure>
+
+              <figure class="carousel-item">
+                <img src="images/galeria/acao-4.jpg" alt="Crianças lendo livros em uma roda de leitura" width="1200" height="675" loading="lazy" />
+                <figcaption class="galeria-legenda">
+                  <span class="etiqueta">Educação</span>
+                  <h3>Roda de leitura</h3>
+                  <p>Contação de histórias e doação de livros para crianças da comunidade.</p>
+                </figcaption>
+              </figure>
+
+              <figure class="carousel-item">
+                <img src="images/galeria/acao-5.jpg" alt="Cachorro resgatado recebendo carinho de uma voluntária" width="1200" height="675" loading="lazy" />
+                <figcaption class="galeria-legenda">
+                  <span class="etiqueta">Animais</span>
+                  <h3>Feira de adoção</h3>
+                  <p>Cães e gatos resgatados à procura de um novo lar.</p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <!-- Setas -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselAcoes" data-bs-slide="prev">
+              <span class="galeria-seta" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+              <span class="visually-hidden">Foto anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosselAcoes" data-bs-slide="next">
+              <span class="galeria-seta" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+              <span class="visually-hidden">Próxima foto</span>
+            </button>
+          </div>
+
+          <p class="galeria-aviso">Imagens ilustrativas de bancos de imagens gratuitos.</p>
         </div>
       </section>
 
-      <!-- PERGUNTAS FREQUENTES (Membro 3) -->
       <section id="faq" aria-labelledby="faq-titulo">
         <div class="container">
           <div class="text-center mb-5">
@@ -259,7 +330,9 @@
 
             <div class="accordion-item">
               <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">Posso ajudar sem ser voluntário?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                  Posso ajudar sem ser voluntário?
+                </button>
               </h3>
               <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
                 <div class="accordion-body">Sim. Você pode fazer doações pelos sites dos projetos, participar das campanhas ou divulgar as iniciativas para a sua rede de contatos.</div>
@@ -268,7 +341,9 @@
 
             <div class="accordion-item">
               <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">As campanhas de arrecadação são reais?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">
+                  As campanhas de arrecadação são reais?
+                </button>
               </h3>
               <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
                 <div class="accordion-body">Não. As campanhas são ilustrativas e foram criadas para fins acadêmicos. Para doar de verdade, use os links oficiais de cada projeto social.</div>
@@ -277,7 +352,9 @@
 
             <div class="accordion-item">
               <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">O Conecta Solidário representa essas organizações?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                  O Conecta Solidário representa essas organizações?
+                </button>
               </h3>
               <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
                 <div class="accordion-body">Não. Este é um projeto acadêmico da disciplina de Desenvolvimento Front-End para Web (UNIPÊ) e não tem vínculo com as organizações citadas.</div>
@@ -286,7 +363,9 @@
 
             <div class="accordion-item">
               <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6">Meus dados ficam armazenados?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6">
+                  Meus dados ficam armazenados?
+                </button>
               </h3>
               <div id="faq-6" class="accordion-collapse collapse" data-bs-parent="#acordeao-faq">
                 <div class="accordion-body">Não. O formulário é apenas uma simulação: nenhum dado é enviado nem guardado.</div>
@@ -349,10 +428,11 @@
 
         <div class="rodape-base">
           <p>© <span id="ano-atual">2026</span> Conecta Solidário. Projeto acadêmico da disciplina Desenvolvimento Front-End para Web (UNIPÊ), sem vínculo com as organizações citadas.</p>
-          <p>Desenvolvido por 
-            <a href="https://github.com/eduardoneto01/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Eduardo Francisco">Eduardo Francisco</a>, 
-            <a href="https://github.com/florentinocaze/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Florentino Cazé">Florentino Cazé</a> e 
-            <a href="https://github.com/manoellimanetto2016-web/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Manoel Pereira">Manoel Pereira</a>.</p>
+          <p>
+            Desenvolvido por <a href="https://github.com/eduardoneto01/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Eduardo Francisco">Eduardo Francisco</a>,
+            <a href="https://github.com/florentinocaze/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Florentino Cazé">Florentino Cazé</a> e
+            <a href="https://github.com/manoellimanetto2016-web/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub de Manoel Pereira">Manoel Pereira</a>.
+          </p>
         </div>
       </div>
     </footer>
