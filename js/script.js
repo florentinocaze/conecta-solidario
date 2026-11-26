@@ -1,6 +1,6 @@
 const modalProjeto = document.getElementById("modalProjeto");
 const botoesFiltro = document.querySelectorAll(".filtro-projeto");
-const cardsProjeto = document.querySelectorAll(".card-projeto");
+const cardsProjeto = document.querySelectorAll(".card-projeto-item");
 
 document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("menu-principal");
