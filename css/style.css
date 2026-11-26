@@ -644,3 +644,42 @@
 .voltar-topo:hover {
   background-color: var(--cs-coral-escuro);
 }
+
+/* ===== ADICIONAR AO FINAL DO style.css ===== */
+
+/* FAQ */
+#faq {
+  padding: var(--cs-secao-espaco) 0;
+}
+
+#faq h2 {
+  color: var(--cs-petroleo);
+  font-family: var(--cs-fonte-titulo);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.faq-acordeao {
+  max-width: 800px;
+  --bs-accordion-bg: var(--cs-branco);
+  --bs-accordion-color: var(--cs-tinta);
+  --bs-accordion-border-color: var(--cs-borda);
+  --bs-accordion-btn-color: var(--cs-tinta);
+  --bs-accordion-btn-bg: var(--cs-branco);
+  --bs-accordion-active-color: var(--cs-petroleo);
+  --bs-accordion-active-bg: var(--cs-petroleo-50);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 3px var(--bs-focus-ring-color);
+  --bs-accordion-border-radius: 1.25rem;
+  --bs-accordion-inner-border-radius: calc(1.25rem - 1px);
+  box-shadow: var(--cs-sombra);
+}
+
+.faq-acordeao .accordion-button {
+  font-weight: 600;
+  min-height: 56px;
+}
+
+/* Setinha visível no tema escuro */
+[data-bs-theme="dark"] .faq-acordeao .accordion-button::after {
+  filter: invert(1) brightness(1.5);
+}
