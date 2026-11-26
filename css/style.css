@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-/* Variáveis da identidade visual  */
+/* VARIÁVEIS  */
+
 :root {
   /* Cores da marca */
   --cs-petroleo: #0f5e66; /* primária: header, títulos, links */
@@ -20,24 +21,21 @@
   --cs-cinza: #5b6b70; /* texto secundário */
   --cs-borda: #e9dfd3;
 
-  /* Texto sobre o botão de ação (muda no tema escuro) */
   --cs-texto-acao: #ffffff;
-
-  /* Tipografia */
-  --cs-fonte-titulo: "Nunito", system-ui, sans-serif;
-  --cs-fonte-texto: "Inter", system-ui, sans-serif;
-
-  /* Espaçamento entre seções */
-  --cs-secao-espaco: 96px;
+  --cs-rodape-fundo: #0B4A50;
+  --cs-rodape-texto: #D7ECEA;
 
   /* Sombra padrão dos cards */
   --cs-sombra: 0 2px 12px rgba(31, 42, 46, 0.06);
 
-  /* Altura da navbar fixa (usada no scroll das âncoras) */
+  --cs-fonte-titulo: "Nunito", system-ui, sans-serif;
+  --cs-fonte-texto: "Inter", system-ui, sans-serif;
+  
+  --cs-secao-espaco: 96px;
   --cs-altura-header: 80px;
 }
 
-/* Sobrescrita do Bootstrap e tema claro */
+/* Tema claro */
 :root,
 [data-bs-theme="light"] {
   --bs-body-font-family: var(--cs-fonte-texto);
@@ -81,6 +79,8 @@
   --cs-borda: #2a4644;
   --cs-texto-acao: #1f2a2e;
   --cs-sombra: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --cs-rodape-fundo: #081517;
+  --cs-rodape-texto: #B9CBC9;
 
   --bs-body-color: var(--cs-tinta);
   --bs-body-bg: var(--cs-areia);
@@ -97,7 +97,7 @@
   --bs-focus-ring-color: rgba(92, 200, 194, 0.4);
 }
 
-/* Botões */
+/* BOTÕES */
 .btn {
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-padding-y: 0.75rem;
@@ -157,7 +157,8 @@
   --bs-btn-color: var(--cs-areia);
 }
 
-/* Header */
+/* HEADER */
+
 .site-header {
   background-color: var(--cs-branco);
   border-bottom: 1px solid var(--cs-borda);
@@ -174,7 +175,8 @@
   width: auto;
 }
 
-/* Troca da logo conforme o tema */
+/* LOGO */
+
 .logo-tema-escuro {
   display: none !important;
 }
@@ -202,13 +204,11 @@
   color: var(--cs-petroleo);
 }
 
-/* .active é colocado pelo Scrollspy do Bootstrap */
 .site-header .nav-link.active {
   color: var(--cs-petroleo);
   border-bottom-color: var(--cs-sol);
 }
 
-/* Botões à direita: tema, "Quero ajudar" e menu hambúrguer */
 .botoes-header {
   display: flex;
   align-items: center;
@@ -262,7 +262,7 @@
   }
 }
 
-/* Projetos */
+/* PROJETOS */
 
 /* Espaçamento das seções */
 #projetos,
@@ -304,4 +304,130 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background-color: var(--cs-rodape-fundo);
+  color: var(--cs-rodape-texto);
+  padding-top: 64px;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: var(--cs-rodape-texto);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.site-footer img {
+  height: 48px;
+  width: auto;
+}
+
+.rodape-missao {
+  max-width: 32ch;
+}
+
+.rodape-titulo {
+  font-family: var(--cs-fonte-texto);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cs-sol);
+  margin-bottom: 1rem;
+}
+
+.rodape-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rodape-redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.rodape-redes a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.15rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.rodape-redes a:hover,
+.rodape-redes a:focus-visible {
+  background-color: var(--cs-coral);
+  color: #FFFFFF;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.rodape-base {
+  margin-top: 48px;
+  padding-block: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  font-size: 0.85rem;
+}
+
+.rodape-base p {
+  margin: 0;
+}
+
+/* Botão voltar ao topo */
+.voltar-topo {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--cs-coral);
+  color: var(--cs-texto-acao);
+  font-size: 1.25rem;
+  box-shadow: 0 6px 18px rgba(31, 42, 46, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.voltar-topo.visivel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.voltar-topo:hover {
+  background-color: var(--cs-coral-escuro);
 }
