@@ -513,8 +513,14 @@
 .site-footer {
   background-color: var(--cs-rodape-fundo);
   color: var(--cs-rodape-texto);
-  padding-top: 64px;
+  padding-top: 32px;
   font-size: 0.95rem;
+}
+
+@media (min-width: 992px) {
+  .site-footer {
+    padding-top: 64px;
+  }
 }
 
 .site-footer a {
