@@ -1,0 +1,127 @@
+/* SOBRE */
+
+/* Espaçamento das seções */
+#sobre,
+#historia,
+#missao {
+  padding: var(--cs-secao-espaco) 0;
+}
+
+#missao {
+    padding-top: 0;
+}
+
+/* Banner */
+.sobre-banner {
+  position: relative;
+  overflow: hidden;
+  padding-block: 56px 64px;
+  background-color: var(--cs-petroleo-50);
+}
+
+@media (min-width: 992px) {
+  .sobre-banner {
+    padding-block: 80px 88px;
+  }
+}
+
+/* Meio sol decorativo no canto do banner */
+.sobre-banner::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+  width: 320px;
+  aspect-ratio: 2 / 1;
+  border-radius: 999px 999px 0 0;
+  background-color: var(--cs-coral-400);
+  opacity: 0.18;
+}
+
+.sobre-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-banner h1 {
+  margin-bottom: 0.75rem;
+}
+
+.sobre-banner .lead {
+  max-width: 38rem;
+  margin: 0;
+}
+
+.breadcrumb {
+  --bs-breadcrumb-divider-color: var(--cs-cinza);
+  --bs-breadcrumb-item-active-color: var(--cs-cinza);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Nossa história */
+.historia-imagem {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--bs-border-radius-lg);
+  box-shadow: var(--cs-sombra);
+}
+
+/* Missão, visão e valores */
+.mvv-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mvv-grade {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.mvv-card {
+  padding: 2rem;
+  height: 100%;
+}
+
+.mvv-card h3 {
+  margin: 1rem 0 0.75rem;
+}
+
+.mvv-card p {
+  margin: 0;
+}
+
+.mvv-icone {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: var(--cs-petroleo-50);
+  color: var(--cs-petroleo);
+  font-size: 1.5rem;
+}
+
+.mvv-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mvv-lista li {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--cs-petroleo-50);
+  color: var(--cs-petroleo);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
